@@ -1,4 +1,4 @@
-const sum = require('../public/sum');
+// const sum = require('../public/sum');
 
 // test('adds 1 + 2 to equal 3', () => {
 //   expect(sum(1, 2)).toBe(3);
@@ -38,18 +38,32 @@ const sum = require('../public/sum');
 //     expect(value).toEqual(4);
 //   });
 
-test('adding floating point numbers', () => {
-    const value = 0.1 + 0.2;
-    //expect(value).toBe(0.3);           This won't work because of rounding error
-    expect(value).toBeCloseTo(0.3); // This works.
-  });
+// test('adding floating point numbers', () => {
+//     const value = 0.1 + 0.2;
+//     //expect(value).toBe(0.3);           This won't work because of rounding error
+//     expect(value).toBeCloseTo(0.3); // This works.
+//   });
 
 
-  test('there is no I in team', () => {
-    expect('team').not.toMatch(/I/);
-  });
+//   test('there is no I in team', () => {
+//     expect('team').not.toMatch(/I/);
+//   });
   
-  test('but there is a "stop" in Christoph', () => {
-    expect('Christoph').toMatch(/stop/);
+//   test('but there is a "stop" in Christoph', () => {
+//     expect('Christoph').toMatch(/stop/);
+//   });
+
+
+function compileAndroidCode() {
+    throw new Error('you are using the wrong JDK');
+  }
+  
+  test('compiling android goes as expected', () => {
+    expect(compileAndroidCode).toThrow();
+    expect(compileAndroidCode).toThrow(Error);
+  
+    // You can also use the exact error message or a regexp
+    expect(compileAndroidCode).toThrow('you are using the wrong JDK');
+    expect(compileAndroidCode).toThrow(/JDK/);
   });
 

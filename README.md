@@ -27,3 +27,10 @@ npm start
 ```
 npm run test
 ```
+
+## Testing methods
+
+* End to End: A helper robot that behaves like a user to click around the app and verify that it functions correctly. Sometimes called "functional testing" or e2e.
+* Integration: Verify that several units work together in harmony.
+* Unit: Verify that individual, isolated parts work as expected.
+* Static: Catch typos and type errors as you write the code.
